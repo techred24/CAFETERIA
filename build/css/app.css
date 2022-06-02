@@ -1,6 +1,1 @@
-body {
-  background-color: green;
-  font-size: 4rem;
-  display: -ms-flexbox;
-  display: flex;
-}
+.header{display:flex;flex-direction:column}nav{display:flex}body{background-color:green;font-size:4rem;display:flex;gap:2}div{display:grid;grid-template-columns:3rem}

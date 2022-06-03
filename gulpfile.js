@@ -7,7 +7,7 @@ function css(done) {
     // Compilar sass
     // Pasos: 1 - identificar archivo, 2 - Compilarla, 3 - Guardar el .css
     src('src/scss/app.scss')
-        .pipe( sass({outputStyle: 'compressed'}) )
+        .pipe( sass({outputStyle: 'expanded'}) )
         .pipe( postcss([ autoprefixer() ]) )
         .pipe( dest('build/css') )
 

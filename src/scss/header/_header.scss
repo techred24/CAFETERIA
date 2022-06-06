@@ -4,7 +4,6 @@
 .header {
     padding: 5rem 0;
     position: relative;
-    // @include m.bgColor(red);
 
     &::before {
         content: '';
@@ -25,5 +24,4 @@
 .header-inicio {
     background-image: url(../img/header_inicio.jpg);
 
-    // @include m.bgColor(blue);
 }

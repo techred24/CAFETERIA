@@ -1,0 +1,15 @@
+@use 'base/mixins' as m;
+
+.galeria {
+    @include m.grid(2, 2rem);
+
+    @include m.desktop {
+        @include m.grid(4, 2rem);
+    }
+
+    .imagen {
+        img {
+            height: 30rem;
+        }
+    }
+}

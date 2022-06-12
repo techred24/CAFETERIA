@@ -433,6 +433,14 @@ h3 {
   background-color: #5E311E;
 }
 
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.margin-negativo-10 {
+  margin-top: -10rem;
+}
+
 .header {
   padding: 5rem 0;
   position: relative;
@@ -682,4 +690,20 @@ h3 {
 .menu li .precio {
   font-size: 4rem;
   font-weight: 700;
+}
+
+.nuestros-testimoniales {
+  padding: 10rem 2rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .nuestros-testimoniales {
+    padding: 10rem;
+  }
+}
+.nuestros-testimoniales .testimonial {
+  background-color: #ebe7de;
+  padding: 2rem 4rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }

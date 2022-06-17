@@ -3,3 +3,7 @@
 @use 'inicio';
 @use 'footer';
 @use 'internas';
+
+
+// Las utilidades se compilan al final
+@use 'utilidades';

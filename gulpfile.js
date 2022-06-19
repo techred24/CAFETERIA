@@ -4,6 +4,8 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 // IMAGENES
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -12,8 +14,10 @@ function css(done) {
     // Compilar sass
     // Pasos: 1 - identificar archivo, 2 - Compilarla, 3 - Guardar el .css
     src('src/scss/app.scss')
+        .pipe( sourcemaps.init() )
         .pipe( sass({outputStyle: 'expanded'}) )
-        .pipe( postcss([ autoprefixer() ]) )
+        .pipe( postcss([ autoprefixer(), cssnano() ]) )
+        .pipe( sourcemaps.write('.') )
         .pipe( dest('build/css') )
 
     done();
@@ -45,7 +49,7 @@ function versionAvif() {
 
 function dev() {
     watch('src/scss/**/*.scss', css);
-    watch('src/img/**/*', imagenes);
+    // watch('src/img/**/*', imagenes);
 }
 
 
